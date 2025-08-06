@@ -1,12 +1,79 @@
-# React + Vite
+# 🌍 goExplore - Travel Website
+Welcome to goExplore, a responsive and visually stunning travel website built using React JS. It helps users discover, explore, and plan unforgettable trips to destinations all over the world. With a sleek UI, interactive features, and travel-ready suggestions, goExplore is designed to inspire wanderlust and ease travel planning.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Features
+### ✨ Hero Header
 
-Currently, two official plugins are available:
+Parallax background image
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Navigation bar with responsive design
 
-## Expanding the ESLint configuration
+Tabbed search box (Stays, Flights, Hotels, Restaurants)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Date and destination inputs with a search CTA
+
+### 🌟 Section 2: Traveller's Favourite
+
+Highlighted destinations like Singapore, Australia, and Thailand
+
+Grid layout showcasing top places with appealing visuals
+
+### 🏞️ Section 3: Book Your Next Trip
+Tabs for category-based filtering (Famous Area, Mountains, Cities, Nature)
+
+Card layout showcasing locations like Sri Lanka, India, Bangladesh
+
+### 🔥 Section 4: Last Minute Deals
+Featured hotel deals with image, price, and travel dates
+
+Destinations include Antigua, Sri Lanka, Morocco
+
+### ❄️ Section 5: Winter Specials
+Exclusive winter travel destinations like Nepal, Kashmir, Switzerland, Tibet, South Korea
+
+Promo badges (e.g., "Save 30%", "Exclusive Trip")
+
+### 🧭 Section 6: Footer
+Brand logo and essential links (Company info, Policies, Help)
+
+App store badges for mobile access
+
+Legal section for policies and copyrights
+
+## 🧰 Tech Stack
+React JS
+
+HTML5 & CSS3
+
+Bootstrap 5
+
+Remix Icons
+
+Responsive Web Design
+
+## 📁 Folder Structure (Overview)
+/src
+
+  ├── Components
+  
+  │   ├── Header (Section1)
+  
+  │   ├── Section2
+  
+  │   ├── Section3
+  
+  │   ├── Section4
+  
+  │   ├── Section5
+  
+  │   ├── Section6 (Footer)
+  
+  ├── App.jsx
+  
+  ├── index.js
+
+
+  
+
+https://github.com/user-attachments/assets/65d66367-54bd-438a-b200-cb731466b51a
+
