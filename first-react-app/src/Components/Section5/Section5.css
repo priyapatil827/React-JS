@@ -1,0 +1,96 @@
+.winter {
+  background-image: url("https://images.unsplash.com/photo-1611004739509-f23bd5730705?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 100px;
+  color: #111;
+  margin-top: 30px;
+}
+
+.winter-overlay {
+  background-color: rgba(220, 219, 219, 0.9);
+  border-radius: 16px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  color: #000;
+}
+
+.winter-heading {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.winter-subtext {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.winter-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.winter-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.winter-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.winter-card:hover img {
+  transform: scale(1.05);
+}
+
+.text-block {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 100%;
+  padding: 5px 5px;
+}
+
+.text-block h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.text-block p {
+  font-size: 12px;
+}
+
+.badge {
+  top: 10px;
+  left: 10px;
+  bottom: auto;
+  background: #e91e63;
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 10px 10px;
+  width: fit-content;
+  position: absolute;
+}
+
+.badge.yellow {
+  background: #ffc107;
+  color: #000;
+}
+
+.badge.center {
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,94 @@
+.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 40px 60px;
+  font-family: sans-serif;
+}
+
+.footer .blue {
+  color: #0ea5e9;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-brand h2 {
+  margin: 0;
+}
+
+.footer-links a {
+  margin-right: 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-columns div {
+  flex: 1 1 150px;
+}
+
+.footer-columns h4 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-columns ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.footer-columns li {
+  margin: 6px 0;
+  color: #bbb;
+}
+
+.footer-columns a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.footer-app img {
+  width: 120px;
+  margin: 8px 0;
+  border-radius: 6px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .socials svg {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.footer-bottom .legal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+}
+
