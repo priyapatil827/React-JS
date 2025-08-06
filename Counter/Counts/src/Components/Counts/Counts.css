@@ -1,0 +1,79 @@
+/* Counter.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.counter-container {
+  margin: 80px auto;
+  width: 350px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #ffffffcc;
+}
+
+.count-display {
+  font-size: 72px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 80px;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn.add {
+  background: linear-gradient(45deg, #00c853, #b2ff59);
+  color: #000;
+}
+
+.btn.sub {
+  background: linear-gradient(45deg, #d50000, #ff8a80);
+  color: #000;
+}
+
+.btn.mul {
+  background: linear-gradient(45deg, #2962ff, #82b1ff);
+  color: #000;
+}
+
+.btn.div {
+  background: linear-gradient(45deg, #ff6f00, #ffe57f);
+  color: #000;
+}
