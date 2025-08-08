@@ -23,13 +23,15 @@ CSS3 (Flexbox, gradients, transitions)
 JavaScript (ES6+)
 
 ## 🧾 File Structure
-pgsql
-Copy
-Edit
+
 📁 src/
+
 ├── 📄 App.jsx         # Renders all quote cards using map
+
 ├── 📄 Data.js         # Array of 30 quote objects
+
 ├── 📄 Quote.jsx       # Quote card component
+
 ├── 📄 Quote.css       # Styling for quote cards
 
 
