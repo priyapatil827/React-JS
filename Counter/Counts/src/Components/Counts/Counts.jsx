@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
-import './Counts.css'; 
+import './Counts.css';
 
 const Counter = () => {
     const [count, setCount] = useState(0);
 
     const add = () => {
-        setCount(count + 1);
+        let temp = count;
+        temp++;
+        setCount(temp);
     };
 
     const sub = () => {
-        setCount(count - 1);
+        let temp = count;
+        temp--;
+        setCount(temp);
     };
 
     const multiply = () => {
-        setCount(count * 2);
+        let temp = count;
+        temp*=2;
+        setCount(temp);;
     };
 
     const division = () => {
-        setCount(count / 2);
+        let temp = count;
+        temp/=2;
+        setCount(temp);
     };
 
     return (
