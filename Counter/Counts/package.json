@@ -23,5 +23,10 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "vite": "^7.0.4"
-  }
+  },
+  "description": "A stylish and interactive Counter App built with React.js and custom CSS styling. This mini-project demonstrates React’s useState hook for managing state and includes basic arithmetic operations with a beautiful UI.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
