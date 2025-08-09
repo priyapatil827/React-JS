@@ -12,26 +12,29 @@ export default function Book() {
 
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
+    const [index, setIndex] = useState(0);
 
-    const handleAdd = () => {
-        if (title.trim() === "" || author.trim() === "") return;
-
+    const addBook = () => {
         const newBook = {
-            id: books.length + 1,
             title: title,
-            author: author
-        };
-
-        setBooksList([...books, newBook]);
+            author: author,
+        }
+        setBooksList([...books, newBook])
         setTitle("");
         setAuthor("");
-    };
+    }
 
-    const handleRemove = (index) => {
+    const removeBook = (index) => {
         const updatedBooks = [...books];
         updatedBooks.splice(index, 1);
         setBooksList(updatedBooks);
     };
+
+    const updateBook = (index) => {
+        setIndex(index);
+        setTitle(books[index].title);
+        setAuthor(books[index].author);
+    }
 
     return (
         <div>
@@ -50,14 +53,15 @@ export default function Book() {
                 onChange={(e) => setAuthor(e.target.value)}
                 className="input-book"
             />
-            <button className="add-book" onClick={handleAdd}>Add</button>
+            <button className="add-book" onClick={addBook}>Add</button>
 
             {books.map((book, index) => (
                 <div key={book.id}>
-                    
-                    <p>Title : {book.title}</p>
-                    <p>Author : {book.author}</p>
-                    <button className="remove-book" onClick={() => handleRemove(index)}>X</button>
+
+                    <p className="p-title">Title : {book.title}</p>
+                    <p className="p-author">Author : {book.author}</p>
+                    <button className="removebook" onClick={() => removeBook(index)}>Remove</button>
+                    <button className="updateBook" onClick={() => updateBook(index)}>Update</button>
                 </div>
             ))}
         </div>

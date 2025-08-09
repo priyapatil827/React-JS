@@ -1,90 +1,106 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(to right, #a18cd1, #fbc2eb);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8f1e7, #f5e0c3);
+  margin: 0;
+  padding: 0;
 }
 
-div {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 40px;
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: center;
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #5d4037;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fffaf3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(92, 64, 51, 0.2);
 }
 
 .input-book {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid purple;
-    border-radius: 10px;
-    outline: none;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-    transition: 0.3s;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #c1a57b;
+  background-color: #fffaf0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black; /* Font color black */
+  outline: none;
+  box-shadow: inset 0px 2px 4px rgba(92, 64, 51, 0.1);
 }
 
 .input-book:focus {
-    background-color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-color: #8d6e63;
+  box-shadow: 0 0 6px rgba(141, 110, 99, 0.5);
+}
+
+.add-book, .removebook, .updateBook {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
 .add-book {
-    background-color: #6a11cb;
-    background-image: linear-gradient(315deg, #ad81dd 10%, #72067c 74%);
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    margin: 15px 0;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
+  background-color: #8bc34a;
+  color: white;
 }
 
 .add-book:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+  background-color: #689f38;
 }
 
-.remove-book {
-    background-color: #ff4e50;
-    background-image: linear-gradient(to right, #ff4e50, #f9d423);
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    margin-top: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s ease;
+.removebook {
+  background-color: #f44336;
+  color: white;
 }
 
-.remove-book:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
+.removebook:hover {
+  background-color: #c62828;
 }
 
-p {
-    margin: 5px 0;
-    font-size: 18px;
+.updateBook {
+  background-color: #2196f3;
+  color: white;
+}
+
+.updateBook:hover {
+  background-color: #1565c0;
+}
+
+.book-card {
+  background: #fff8e1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(92, 64, 51, 0.15);
+  border-left: 6px solid #c1a57b;
+}
+
+.book-card p {
+  margin: 5px 0;
+  color: #4e342e;
+  font-weight: 500;
+}
+
+.p-title
+{
     color: black;
 }
 
-.title
+.p-author
 {
-    font-size: 40px;
-    color: purple;
+    color: black;
 }

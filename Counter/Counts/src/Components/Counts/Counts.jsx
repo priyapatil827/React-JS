@@ -19,7 +19,11 @@ const Counter = () => {
     const multiply = () => {
         let temp = count;
         temp*=2;
+<<<<<<< HEAD
         setCount(temp);;
+=======
+        setCount(temp);
+>>>>>>> 50bfdbe69dcdb71aa1850b9593c1432000e3d121
     };
 
     const division = () => {
