@@ -1,12 +1,36 @@
-# React + Vite
+# 📚 Book Tracking System
+A simple yet elegant ReactJS application to add, update, and remove books from a list.
+Styled with a warm and minimal theme using pure CSS for a modern, realistic UI.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
+Add New Books — Enter title & author and add instantly to your list.
 
-Currently, two official plugins are available:
+Update Existing Books — Click Update to edit book details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Remove Books — One-click delete option.
 
-## Expanding the ESLint configuration
+Responsive & Stylish UI — Soft colors, rounded corners, and smooth hover effects.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+ReactJS (Functional Components + useState hook)
+
+CSS3 (Custom styling with gradients, shadows, and transitions)
+
+## 📂 Project Structure
+src/
+ ├── Book.js        # Main component with add, update, delete logic
+ ├── Book.css       # Stylish UI design
+ └── index.js       # Entry point
+
+## 🎨 UI Preview
+Warm gradient background with cream tones.
+
+Card-style book entries with subtle shadows.
+
+Hover animations for buttons.
+
+
+
+https://github.com/user-attachments/assets/9bb8ebea-de2b-4928-ae81-bbf249f76480
+
+
