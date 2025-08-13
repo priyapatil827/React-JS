@@ -21,6 +21,8 @@ export default function TextUtils() {
 
     const handleLowerCase = () => setLowerCase(text.toLowerCase());
 
+    
+
     return (
         <div className="textutils-container">
             <h2>📝 Text Utility Tool</h2>
