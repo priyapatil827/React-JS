@@ -56,7 +56,7 @@ export default function Book() {
             <button className="add-book" onClick={addBook}>Add</button>
 
             {books.map((book, index) => (
-                <div key={book.id}>
+                <div>
 
                     <p className="p-title">Title : {book.title}</p>
                     <p className="p-author">Author : {book.author}</p>
