@@ -82,7 +82,7 @@ portfolio/
 ## ⚙️ Installation & Setup  
 
 1. Clone the repository  
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/priyapatil827/portfolio
    cd portfolio
    
 3. Install dependencies
