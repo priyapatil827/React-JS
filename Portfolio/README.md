@@ -89,7 +89,7 @@ portfolio/
    npm install
 
 4. Run the development server
-   http://localhost:3000
+   http://localhost:5173/
 
 ---
 
