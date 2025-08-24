@@ -79,20 +79,6 @@ portfolio/
 
 ---
 
-## ⚙️ Installation & Setup  
-
-1. Clone the repository  
-   git clone https://github.com/priyapatil827/React-JS.git
-   cd React-JS/Portfolio
-   
-3. Install dependencies
-   npm install
-
-4. Run the development server
-   http://localhost:5173/
-
----
-
 ## 🔗 API Integration
 
 This project uses the GitHub REST API to fetch dynamic data.
