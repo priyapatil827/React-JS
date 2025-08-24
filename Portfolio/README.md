@@ -82,8 +82,8 @@ portfolio/
 ## ⚙️ Installation & Setup  
 
 1. Clone the repository  
-   git clone https://github.com/priyapatil827/portfolio
-   cd portfolio
+   git clone https://github.com/priyapatil827/React-JS.git
+   cd React-JS/Portfolio
    
 3. Install dependencies
    npm install
