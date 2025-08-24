@@ -1,12 +1,43 @@
-# React + Vite
+# 🛒 React E-Commerce Product Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React.js E-Commerce Product Management App that allows you to add, update, and delete products with stylish UI. Products display with images, names, and prices in a responsive grid layout.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+➕ Add Products with name, price, and optional image URL
 
-## Expanding the ESLint configuration
+🔄 Auto Image Fetching (if no image is provided, it fetches a random image from Unsplash based on product name)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✏️ Update/Edit Products easily
+
+❌ Delete Products from the list
+
+🎨 Modern UI with CSS Styling
+
+📱 Responsive Design (works on desktop & mobile)
+
+## 🖥️ Tech Stack
+
+React.js (Frontend framework)
+
+useState Hook (State management)
+
+Unsplash API (via source.unsplash.com) for random images
+
+Custom CSS for styling
+
+
+## 🏗️ Future Improvements
+
+🔍 Add search & filter functionality
+
+📦 Add product categories
+
+💾 Connect to a backend (Node.js / Firebase / MongoDB) for data persistence
+
+
+
+
+https://github.com/user-attachments/assets/77e4ca65-7a8d-4f95-8771-e90908bfed76
+
+
