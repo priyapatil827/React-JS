@@ -1,12 +1,128 @@
-# React + Vite
+# 🌐 React Portfolio Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Portfolio Website** built with **React.js**.  
+This project showcases personal details, GitHub repositories, and a contact form.  
+It also integrates with the **GitHub API** to fetch real-time user information and repositories.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features  
 
-## Expanding the ESLint configuration
+- 📖 **About Section** – Displays your bio and introduction dynamically from GitHub API.  
+- 💻 **Projects Section** – Fetches and lists GitHub repositories with name, language, and live repo links.  
+- 📩 **Contact Form** – Allows users to enter their details and ideas (stored via React refs).  
+- 🧭 **Navigation Bar** – Smooth navigation to Home, About, Projects, Experience, and Contact.  
+- ⚡ **Responsive Design** – Works seamlessly across devices.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack  
+
+- **Frontend**: React.js  
+- **Styling**: CSS3 (custom styles)  
+- **API**: GitHub REST API (via Axios)  
+- **Version Control**: Git & GitHub  
+
+---
+
+## 📂 Folder Structure  
+
+
+portfolio/
+
+├── public/
+
+│ └── index.html
+
+├── src/
+
+│ ├── Components/
+
+│ │ ├── Navbar/
+
+│ │ │ ├── Navbar.jsx
+
+│ │ │ └── Navbar.css
+
+│ │ ├── About/
+
+│ │ │ ├── About.jsx
+
+│ │ │ └── About.css
+
+│ │ ├── Projects/
+
+│ │ │ ├── Project.jsx
+
+│ │ │ └── Project.css
+
+│ │ ├── Contact/
+
+│ │ │ ├── Contact.jsx
+
+│ │ │ └── Contact.css
+
+│ ├── Screens/
+
+│ │ └── Home/
+
+│ │ └── Home.jsx
+
+│ ├── App.js
+
+│ ├── App.css
+
+│ └── index.js
+
+└── package.json
+
+
+---
+
+## ⚙️ Installation & Setup  
+
+1. Clone the repository  
+   git clone https://github.com/your-username/portfolio.git
+   cd portfolio
+   
+3. Install dependencies
+   npm install
+
+4. Run the development server
+   http://localhost:3000
+
+---
+
+## 🔗 API Integration
+
+This project uses the GitHub REST API to fetch dynamic data.
+
+-User Info API:
+https://api.github.com/users/<your-username>
+
+-Repositories API:
+https://api.github.com/users/<your-username>/repos
+
+## 🚀 Deployment
+
+This project can be deployed easily on:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+
+
+https://github.com/user-attachments/assets/8f88c021-8195-4bbb-a179-260c4ca564f4
+
+
+
+
+
+
+
+
+
+
