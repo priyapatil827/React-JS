@@ -1,0 +1,92 @@
+.project-section {
+  padding: 4rem 2rem;
+  background:#C4D9FF; 
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.box {
+  background: #1e293b;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #f1f5f9;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #00f6ff, #ff00c8, #00ff73, #00f6ff);
+  background-size: 400% 400%;
+  animation: gradientMove 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 0;
+}
+
+
+.box h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+  color: #B8CFCE;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-row button {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.btn-row button:first-child {
+  background: #475569;
+}
+
+.btn-row button:last-child {
+  background: linear-gradient(135deg, #00f6ff, #ff00c8);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.4);
+}
+
+.btn-row button:last-child a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-row button:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.box:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,39 @@
+.profile-section
+{
+    display: flex;
+    align-items: center;
+    background-color: #C4D9FF;
+}
+
+.name
+{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #555879;
+}
+
+.p1
+{
+    font-size: 25px;
+    color: #555879;
+    font-weight: 600;
+}
+
+.p2
+{
+    font-size: 20px;
+    color: #555879;
+}
+
+.info-section
+{
+    margin: 20px;
+}
+
+img
+{
+    height: 400px;
+    margin: 20px;
+    border-radius: 20px;
+}
+

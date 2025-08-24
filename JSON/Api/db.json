@@ -1,0 +1,101 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "The Hidden Path",
+      "author": "Ava Johnson",
+      "year": 2021,
+      "genre": "Mystery"
+    },
+    {
+      "id": 2,
+      "title": "Shadows and Light",
+      "author": "Liam Carter",
+      "year": 2020,
+      "genre": "Thriller"
+    },
+    {
+      "id": 3,
+      "title": "Winds of Change",
+      "author": "Maya Singh",
+      "year": 2019,
+      "genre": "Drama"
+    },
+    {
+      "id": 4,
+      "title": "Beyond the Stars",
+      "author": "Noah Anderson",
+      "year": 2022,
+      "genre": "Sci-Fi"
+    },
+    {
+      "id": 5,
+      "title": "Echoes of the Past",
+      "author": "Sophia Kim",
+      "year": 2018,
+      "genre": "Historical Fiction"
+    },
+    {
+      "id": 6,
+      "title": "The Last Dawn",
+      "author": "Ethan Brown",
+      "year": 2023,
+      "genre": "Adventure"
+    },
+    {
+      "id": 7,
+      "title": "Whispering Woods",
+      "author": "Olivia Martinez",
+      "year": 2021,
+      "genre": "Fantasy"
+    },
+    {
+      "id": 8,
+      "title": "Silent Truths",
+      "author": "Mason Lee",
+      "year": 2020,
+      "genre": "Crime"
+    },
+    {
+      "id": 9,
+      "title": "Beneath the Waves",
+      "author": "Isabella Davis",
+      "year": 2017,
+      "genre": "Romance"
+    },
+    {
+      "id": 10,
+      "title": "Rise of the Phoenix",
+      "author": "James Wilson",
+      "year": 2022,
+      "genre": "Action"
+    },
+    {
+      "id": "d120"
+    },
+    {
+      "id": 10,
+      "title": "Rise of the Phoenix",
+      "author": "James Wilson",
+      "year": 2022,
+      "genre": "Action"
+    },
+    {
+      "0": {
+        "id": 10,
+        "title": "Rise of the Phoenix",
+        "author": "James Wilson",
+        "year": 2022,
+        "genre": "Action"
+      },
+      "1": {
+        "id": 11,
+        "title": "Rise of the Phoenix",
+        "author": "James Wilson",
+        "year": 2022,
+        "genre": "Action"
+      },
+      "id": "2fad"
+    }
+  ]
+}
