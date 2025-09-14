@@ -1,12 +1,80 @@
-# React + Vite
+# SkillUp - Education & Courses Website
+## 🔹 Project Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SkillUp is a modern, responsive, and user-friendly educational platform built with React and Bootstrap. It is designed to provide students and learners with easy access to courses, learning resources, and information about educational branches across cities. The website is fully responsive and features an interactive UI with a clean design.
 
-Currently, two official plugins are available:
+The platform highlights trending courses, popular locations, and statistics like students trained, courses approved, tie-ups, and certifications to build trust and credibility.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔹 Features
 
-## Expanding the ESLint configuration
+Responsive Navbar: Modern navigation bar with dropdowns for courses, education standards, and about us sections.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Hero Carousel: Full-width image slider showcasing the platform’s highlights.
+
+Statistics Section: Shows students trained, approved courses, company tie-ups, branches, and certifications with icons.
+
+Trending Courses Section: Cards displaying popular courses with images, titles, and "View More" buttons.
+
+Cities Section: Showcases different cities with branches and locations available.
+
+Footer: Contains about info, quick links, and contact details with a clean design.
+
+Bootstrap Icons Integration: Uses Bootstrap Icons for visual enhancements.
+
+Modern Design: Smooth hover effects, shadows, and clean layout using Bootstrap + CSS.
+
+## 🔹 Technologies Used
+
+React.js (Functional Components & JSX)
+
+Bootstrap 5 (Grid system, Carousel, Navbar, Buttons)
+
+Bootstrap Icons for UI icons
+
+CSS (Custom styling for cards, footer, hover effects)
+
+
+## 🔹 Folder Structure
+skillup/
+
+├── public/
+
+│   └── index.html
+
+├── src/
+
+│   ├── Components/
+
+│   │   ├── Hero/
+
+│   │   │   └── Hero.js
+
+│   │   ├── Navbar/
+
+│   │   │   └── Navbar.js
+
+│   │   ├── Section3/
+
+│   │   │   └── Section3.js
+
+│   │   ├── Section4/
+
+│   │   │   └── Section4.js
+
+│   │   └── Footer/
+
+│   │       └── Footer.js
+
+│   ├── App.js
+
+│   └── index.js
+
+├── package.json
+
+└── README.md
+
+
+
+https://github.com/user-attachments/assets/c843cc88-26d6-4f62-8d1d-6a1aa5a3ba00
+
+
