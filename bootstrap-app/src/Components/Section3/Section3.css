@@ -1,5 +1,5 @@
 .album {
-  background: #f8f9fa; /* Light background */
+  background: #f8f9fa;
   padding: 50px 0;
 }
 
@@ -18,7 +18,7 @@
 .card-img-top {
   height: 160px;
   width: 100%;
-  object-fit: cover; /* Default - good for photos */
+  object-fit: cover; 
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
@@ -58,7 +58,7 @@
 
 .card-body h5 {
   white-space: nowrap;      
-  overflow: hidden;         /* box ke bahar ka content chupayega */
-  text-overflow: ellipsis;  /* truncate karke ... dikhayega */
-  font-size: 16px;          /* optional: ek jaisa size */
+  overflow: hidden;        
+  text-overflow: ellipsis; 
+  font-size: 16px;          
 }
