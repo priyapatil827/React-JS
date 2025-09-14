@@ -1,0 +1,52 @@
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-brand {
+  color: #4CAF50;               /* brand color */
+  text-decoration: none;         /* underline हटाओ */
+  font-weight: 700;              /* bold */
+  font-size: 1.8rem;             /* font size */
+  letter-spacing: 1px;           /* थोड़ी spacing */
+  transition: all 0.3s ease;     /* hover smooth effect */
+  position: relative;            /* hover effect के लिए */
+}
+
+/* Hover Effect */
+.navbar-brand::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background-color: #4CAF50;    
+  transition: width 0.3s ease;
+}
+
+.navbar-brand:hover::after {
+  width: 100%;                   
+}
+
+.navbar-brand:hover {
+  color: #388E3C;               
+  transform: scale(1.05);        
+}
+
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e63946; 
+}
+
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
