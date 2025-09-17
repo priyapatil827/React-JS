@@ -1,0 +1,19 @@
+.products-section {
+    background-color: #fff3e0;
+    padding: 60px 0;
+}
+
+.products-section .card {
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.products-section .card:hover {
+    transform: scale(1.05);
+}
+
+.products-section .card-title {
+    color: #e65100;
+    font-weight: 600;
+}

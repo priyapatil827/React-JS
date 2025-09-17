@@ -1,0 +1,56 @@
+.hero {
+    position: relative;
+    background-color: #0b3d91;
+}
+
+.hero .carousel-caption {
+    background-color: rgba(0,0,0,0.4);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.hero .carousel-caption h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero .carousel-caption p {
+    font-size: 1.3rem;
+    color: #ffdd57;
+}
+
+.features-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+.features-section .col-md-4 {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.features-section .col-md-4:hover {
+    transform: translateY(-8px);
+}
+
+.testimonials-section {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+}
+
+.testimonials-section .card {
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.testimonials-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}

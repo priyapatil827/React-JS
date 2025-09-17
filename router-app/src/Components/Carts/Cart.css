@@ -1,0 +1,54 @@
+.cart-section {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.cart-section .card {
+    background-color: #333;
+    border-radius: 15px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.cart-section .btn-danger {
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cart-section .btn-danger:hover {
+    background-color: #ff1a1a;
+}
+
+.cart-section h4 {
+    color: #ffdd57;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer a {
+    color: #f8c471;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ffd966;
+}
+
+
+@media (max-width: 768px) {
+    .features-section .col-md-4,
+    .products-section .card,
+    .testimonials-section .card,
+    .contact-section .card {
+        margin-bottom: 20px;
+    }
+}
