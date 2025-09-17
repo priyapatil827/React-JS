@@ -4,16 +4,15 @@
 }
 
 .navbar-brand {
-  color: #4CAF50;               /* brand color */
-  text-decoration: none;         /* underline हटाओ */
-  font-weight: 700;              /* bold */
-  font-size: 1.8rem;             /* font size */
-  letter-spacing: 1px;           /* थोड़ी spacing */
-  transition: all 0.3s ease;     /* hover smooth effect */
-  position: relative;            /* hover effect के लिए */
+  color: #4CAF50;               
+  text-decoration: none;         
+  font-weight: 700;             
+  font-size: 1.8rem;             
+  letter-spacing: 1px;          
+  transition: all 0.3s ease;    
+  position: relative;            
 }
 
-/* Hover Effect */
 .navbar-brand::after {
   content: '';
   position: absolute;

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1a1a1a; /* dark background */
+  background-color: #1a1a1a; 
   color: #fff;
   font-family: 'Poppins', sans-serif;
 }
@@ -10,7 +10,7 @@
 }
 
 .footer a:hover {
-  color: #4CAF50; /* green hover effect */
+  color: #4CAF50;
   text-decoration: none;
 }
 
