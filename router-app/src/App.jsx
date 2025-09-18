@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SignIn from './Components/SignIn/SignIn'
 import Product from './Components/Product/Product'
 import Navbar from './Components/Navbar/Navbar'
 import { products } from './json/data'
@@ -8,6 +9,7 @@ import Home from './Components/Home/Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Contact from './Components/Contact/Contact'
+
 
 
 
@@ -27,9 +29,9 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/' element={<SignIn />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
         <Route path="/product" element={<Product products={products} onAddToCart={handleAddToCart} />} />
         <Route path="/cart" element={<Carts cartItems={cartItems} setCartItems={setCartItems} />} />
 

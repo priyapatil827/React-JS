@@ -12,7 +12,7 @@
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://i.ytimg.com/vi/fDQHzKZlauA/maxresdefault.jpg"
+                                src="https://kj1bcdn.b-cdn.net/media/70450/rice-seed.jpg"
                                 alt="Slide 1"
                                 style={{ height: '500px', objectFit: 'cover' }}
                             />
