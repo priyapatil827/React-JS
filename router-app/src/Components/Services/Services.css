@@ -1,0 +1,13 @@
+.services {
+  background: #f5fff5;
+}
+
+.service-card {
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.2);
+}

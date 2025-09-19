@@ -8,7 +8,8 @@ import Carts from './Components/Carts/Cart'
 import Home from './Components/Home/Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Contact from './Components/Contact/Contact'
+import Services from './Components/Services/Services'
+import ProductDetails from './Components/ProductDetails/ProductDetails'
 
 
 
@@ -25,17 +26,22 @@ export default function App() {
     navigate("/cart");
   }
 
+
+
   return (
     <>
       <Navbar />
       <Routes>
         <Route path='/' element={<SignIn />}></Route>
         <Route path='/home' element={<Home />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/services' element={<Services />}></Route>
         <Route path="/product" element={<Product products={products} onAddToCart={handleAddToCart} />} />
         <Route path="/cart" element={<Carts cartItems={cartItems} setCartItems={setCartItems} />} />
-
-      </Routes>
+        <Route
+          path="/product/:id"
+          element={<ProductDetails products={products} onAddToCart={handleAddToCart} />}
+        />
+      </Routes >
     </>
   )
 }
