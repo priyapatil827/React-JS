@@ -78,7 +78,11 @@ Navigate between Home, Products, and Cart using the navbar.
 
 
 
-https://github.com/user-attachments/assets/67ebab04-b76d-4bc5-a79a-c9d42cab5924
+
+
+
+https://github.com/user-attachments/assets/d13803da-eb81-4881-92ac-a0ea6715d64c
+
 
 
 
