@@ -1,0 +1,138 @@
+/* Card container */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  width: 900px;
+  margin: 50px auto;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Headings */
+h4, h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #00d2ff, 0 0 10px #00d2ff;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 10px #00d2ff;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  border: none;
+  color: #fff;
+}
+
+.btn-success:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00d2ff, 0 0 30px #3a7bd5;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #fdcb6e, #f39c12);
+  border: none;
+  color: #2d3436;
+}
+
+.btn-warning:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #fdcb6e, 0 0 30px #f39c12;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #e17055, #d63031);
+  border: none;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #e17055, 0 0 30px #d63031;
+}
+
+/* Table */
+/* ===== Make Table Full Width ===== */
+.table {
+  width: 100% !important; /* Full width */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  color: #fff;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+/* Table Container */
+.card {
+  width: 100%; /* Stretch card */
+  max-width: 100%; /* Ignore max-width if any */
+  padding: 25px;
+}
+
+/* Table Header & Cells */
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Buttons inside table */
+.table .btn-sm {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+/* Poster image */
+.table img {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Optional: responsive for smaller screens */
+@media (max-width: 768px) {
+  .table img {
+    width: 50px;
+    height: 70px;
+  }
+}
