@@ -1,221 +1,191 @@
-import React, { useState } from 'react'
-import { data } from "../../assets/data"
-import './Home.css'
-import { use } from 'react'
+
+import React, { useState } from "react";
+import { ordersData } from "../../assets/data";
+import "./Home.css";
 
 export default function Home() {
     const [orderId, setOrderId] = useState("");
-    const [customerName, setCustomerName] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
+    const [customer, setCustomer] = useState("");
+    const [phone, setPhone] = useState("");
     const [product, setProduct] = useState("");
     const [payment, setPayment] = useState("");
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState("All");
     const [date, setDate] = useState("");
-    // const [filteredData, setFilteredData] = useState([...data]);
-    let filteredData = [...data];
-    if (orderId) {
-        filteredData = filteredData.filter(item => item.orderId.toLowerCase().includes(orderId.toLowerCase()))
-    }
-    if (customerName) {
-        filteredData = filteredData.filter(item => item.customerName.toLowerCase().includes(customerName.toLowerCase()))
-    }
-    if (phoneNumber) {
-        filteredData = filteredData.filter(item => item.phoneNumber.toLowerCase().includes(phoneNumber.toLowerCase()))
-    }
-    if (product) {
-        filteredData = filteredData.filter(item => item.product.toLowerCase().includes(product.toLowerCase()))
-    }
-    if (payment) {
-        filteredData = filteredData.filter(item => item.payment.toLowerCase().includes(payment.toLowerCase()))
-    }
-    if (status) {
-        filteredData = filteredData.filter(item => item.status.toLowerCase().includes(status.toLowerCase()))
-    }
-    if (date) {
-        filteredData = filteredData.filter(item => item.date.toLowerCase().includes(date.toLowerCase()))
-    }
 
-    // const handleSearch = () => {
-    //     let tempdata = [...data];
-    //     if (orderId) {
-    //         tempdata = tempdata.filter(item => item.orderId.toLowerCase().includes(orderId.toLowerCase()))
-    //     }
-    //     if (customerName) {
-    //         tempdata = tempdata.filter(item => item.customerName.toLowerCase().includes(customerName.toLowerCase()))
-    //     }
-    //     if (phoneNumber) {
-    //         tempdata = tempdata.filter(item => item.phoneNumber.toLowerCase().includes(phoneNumber.toLowerCase()))
-    //     }
-    //     if (product) {
-    //         tempdata = tempdata.filter(item => item.product.toLowerCase().includes(product.toLowerCase()))
-    //     }
-    //     if (payment) {
-    //         tempdata = tempdata.filter(item => item.payment.toLowerCase().includes(payment.toLowerCase()))
-    //     }
-    //     if (status) {
-    //         tempdata = tempdata.filter(item => item.status.toLowerCase().includes(status.toLowerCase()))
-    //     }
-    //     if (date) {
-    //         tempdata = tempdata.filter(item => item.date.toLowerCase().includes(date.toLowerCase()))
-    //     }
-    //     setFilteredData(tempdata);
-    // }
+    const [filteredData, setFilteredData] = useState([...ordersData]);
 
+    // 🟢 Filter function
+    // const handleFilter = () => {
+        let data = [...ordersData];
 
+        if (orderId) {
+            const idNum = parseInt(orderId);
+            data = data.filter((d) => {
+                const orderNum = parseInt(d.id.replace("#", ""));
+                return orderNum >= idNum;
+            });
+        }
 
+        if (customer) {
+            data = data.filter((d) =>
+                d.customer.toLowerCase().includes(customer.toLowerCase())
+            );
+        }
 
+        if (phone) {
+            data = data.filter((d) => d.phone.includes(phone));
+        }
+
+        if (product) {
+            data = data.filter((d) =>
+                d.product.toLowerCase().includes(product.toLowerCase())
+            );
+        }
+
+        if (payment) {
+            data = data.filter(
+                (d) => d.payment.toLowerCase() === payment.toLowerCase()
+            );
+        }
+
+        if (status && status !== "All") {
+            data = data.filter(
+                (d) => d.status.toLowerCase() === status.toLowerCase()
+            );
+        }
+
+        if (date) {
+            data = data.filter((d) => d.date === date);
+        }
+
+        // setFilteredData(data);
+    // };
+
+    // 🟢 Clear filters
     const handleClear = () => {
         setOrderId("");
-        setCustomerName("");
-        setPhoneNumber("");
+        setCustomer("");
+        setPhone("");
         setProduct("");
         setPayment("");
-        setStatus("");
+        setStatus("All");
         setDate("");
-        setFilteredData([...data]);
+        setFilteredData([...ordersData]);
     };
 
+    // 🟢 Status color classes
+    const getStatusClass = (status) => {
+        switch (status) {
+            case "New":
+                return "status-new";
+            case "Completed":
+                return "status-completed";
+            case "Pending":
+                return "status-pending";
+            case "Canceled":
+                return "status-canceled";
+            default:
+                return "";
+        }
+    };
 
     return (
-        <>
-            <div className="container mt-4">
-                {/* Filters */}
-                <div className="row g-3 mb-4">
-                    <div className="col-md-2">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Order ID"
-                            value={orderId}
-                            onChange={(e) => setOrderId(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-2">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Customer Name"
-                            value={customerName}
-                            onChange={(e) => setCustomerName(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-2">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number"
-                            value={phoneNumber}
-                            onChange={(e) => setPhoneNumber(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-2">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Product"
-                            value={product}
-                            onChange={(e) => setProduct(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-2">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Payment"
-                            value={payment}
-                            onChange={(e) => setPayment(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-2">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Status"
-                            value={status}
-                            onChange={(e) => setStatus(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <input
-                            type="date"
-                            className="form-control"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
-                        />
-                    </div>
-                    <div className="col-md-2 d-flex gap-2">
-                        {/* Search button */}
-                        <button className="btn btn-primary w-100">
-                            Search
-                        </button>
-                        {/* Clear filters button */}
-                        <button className="btn btn-secondary w-100" onClick={handleClear} >
-                            Clear
-                        </button>
-                    </div>
+        <div className="container mt-4">
+            {/* 🔍 Filter Section */}
+            <div className="filters d-flex flex-wrap gap-2 mb-4">
+                <input
+                    type="text"
+                    placeholder="Order ID"
+                    value={orderId}
+                    onChange={(e) => setOrderId(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Customer"
+                    value={customer}
+                    onChange={(e) => setCustomer(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Phone Number"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Product"
+                    value={product}
+                    onChange={(e) => setProduct(e.target.value)}
+                />
+                <select value={payment} onChange={(e) => setPayment(e.target.value)}>
+                    <option value="">All Payments</option>
+                    <option value="Paid">Paid</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Not paid">Not Paid</option>
+                </select>
+                <select value={status} onChange={(e) => setStatus(e.target.value)}>
+                    <option value="All">All</option>
+                    <option value="New">New</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Canceled">Canceled</option>
+                </select>
+                <input
+                    type="date"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                />
+                <div className="actions d-flex gap-2">
+                    <button className="btn btn-primary">
+                        Search
+                    </button>
+                    <button className="btn btn-outline-primary" onClick={handleClear}>
+                        Clear
+                    </button>
                 </div>
             </div>
 
-
-
-            {/* Table */}
-            <div className="table-responsive">
-                <table className="table table-bordered table-hover align-middle">
-                    <thead className="table-light">
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Date</th>
-                            <th>Customer</th>
-                            <th>Phone</th>
-                            <th>Product</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredData.length > 0 ? (
-                            filteredData.map((item) => (
-                                <tr key={item.orderId}>
-                                    <td>{item.orderId}</td>
-                                    <td>{item.date}</td>
-                                    <td>{item.customerName}</td>
-                                    <td>{item.phoneNumber}</td>
-                                    <td>{item.product}</td>
-                                    <td
-                                        className={
-                                            item.payment.toLowerCase() === "paid"
-                                                ? "text-success fw-bold"
-                                                : "text-danger fw-bold"
-                                        }
-                                    >
-                                        {item.payment}
-                                    </td>
-                                    <td
-                                        className={
-                                            item.status.toLowerCase() === "completed"
-                                                ? "text-success fw-bold"
-                                                : item.status.toLowerCase() === "pending"
-                                                    ? "text-warning fw-bold"
-                                                    : item.status.toLowerCase() === "cancelled"
-                                                        ? "text-danger fw-bold"
-                                                        : "text-primary fw-bold"
-                                        }
-                                    >
-                                        {item.status}
-                                    </td>
-                                </tr>
-                            ))
-
-                        ) : (
-                            <tr>
-                                <td colSpan="7" className="text-center text-muted">
-                                    No matching orders found
+            {/* 📋 Orders Table */}
+            <table className="table table-bordered table-hover align-middle">
+                <thead className="table-light">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Payment</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {filteredData.length > 0 ? (
+                        filteredData.map((order) => (
+                            <tr key={order.id}>
+                                <td>{order.id}</td>
+                                <td>{order.date}</td>
+                                <td>{order.customer}</td>
+                                <td>{order.phone}</td>
+                                <td>{order.product}</td>
+                                <td>₹{order.price}</td>
+                                <td>{order.payment}</td>
+                                <td>
+                                    <span className={getStatusClass(order.status)}>
+                                        {order.status}
+                                    </span>
                                 </td>
                             </tr>
-                        )}
-                    </tbody>
-                </table>
-            </div>
-        </>
-    )
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan="8" className="text-center text-danger">
+                                No matching orders found
+                            </td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
+        </div>
+    );
 }
