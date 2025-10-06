@@ -68,3 +68,10 @@ Responsive input filters
 Clean, bordered, hoverable table
 
 Color-coded payments & statuses for quick reading
+
+
+https://github.com/user-attachments/assets/34f56990-3f28-49ed-8204-915ee740444c
+
+
+
+
