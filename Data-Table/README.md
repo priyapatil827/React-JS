@@ -1,16 +1,114 @@
-# React + Vite
+# 📦 Orders Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **React-based Orders Management Dashboard** that allows users to view, filter, and manage customer orders.  
+It provides **search and filtering options** for various fields such as **Order ID, Customer Name, Phone, Product, Payment Status, Order Status, and Date**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 📋 View Orders  
+Displays all customer orders in a clean, responsive table layout.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔍 Filter Orders  
+Filter and search by:
+- **Order ID**
+- **Customer Name**
+- **Phone Number**
+- **Product**
+- **Payment** — Paid, Pending, or Not Paid
+- **Status** — New, Completed, Cancelled, etc.
+- **Date**
 
-## Expanding the ESLint configuration
+### 🧹 Clear Filters  
+Reset all applied filters and show the complete dataset again.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 Responsive UI  
+Built with **Bootstrap 5** and **custom CSS (Home.css)** for a modern dashboard appearance.
+
+### 👤 User Profile & Header  
+Displays the logged-in user’s avatar and a notification icon for better dashboard realism.
+
+### ➕ Action Buttons  
+- **Filter** – Trigger filter panel  
+- **Export** – Placeholder for future CSV/Excel export  
+- **Add New Order** – Placeholder for adding new orders  
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| ⚛️ **React.js** | Frontend framework |
+| 💅 **Bootstrap 5** | UI styling & layout |
+| 🎨 **Custom CSS (Home.css)** | Dashboard customization |
+| 🗂️ **Local JSON (db.js)** | Static dataset for demo orders |
+
+---
+
+## 📂 Project Structure
+src/
+
+├── assets/
+
+│ └── data.js # Orders dataset (JSON-like format)
+
+│
+
+├── components/
+
+│ └── Home.js # Main dashboard component
+
+│
+
+├── styles/
+
+│ └── Home.css # Custom styling for layout
+
+│
+
+├── App.js
+
+└── index.js
+
+---
+
+## ⚙️ How It Works
+
+1. Orders are loaded from the **db.js** file into React state.  
+2. Filters are applied through controlled input fields (Order ID, Customer, etc.).  
+3. Clicking **“Search”** updates the displayed data based on filters.  
+4. **“Clear Filters”** resets everything and reloads all orders.  
+5. Filtered results are displayed instantly in the responsive Bootstrap table.
+
+---
+
+## 📸 UI Overview
+
+- **Header Section:** Includes user avatar and notification icon  
+- **Order Tabs:** All, New, Completed, Cancelled, Pending orders  
+- **Filter Box:** Search by multiple fields  
+- **Table View:** Displays all order details with clean row styling  
+
+---
+
+## 🚀 Future Improvements
+
+✅ Add **pagination** for large datasets  
+✅ Enable **CSV/Excel export** functionality  
+✅ Add an **“Add New Order”** form with field validation  
+✅ Integrate with a **backend API** for live order management  
+
+---
+
+### 🧑‍💻 Author
+Developed by **Priya Patil** — Frontend Developer (React.js)
+
+---
+
+
+https://github.com/user-attachments/assets/159a04f8-a59e-479d-bd33-dc393c8d7827
+
+
+
