@@ -1,0 +1,440 @@
+{
+     "users": [
+    {
+      "id": 1,
+      "name": "Ravi Sharma",
+      "role": "Manager",
+      "email": "ravi@spicehub.com",
+      "password": "Man@123",
+      "salary": 50000,
+      "totalSales": 150000,
+      "totalOrdersHandled": 320
+    },
+    {
+      "id": 2,
+      "name": "Amit Kumar",
+      "role": "Employee",
+      "email": "amit@spicehub.com",
+      "password": "Pass@123",
+      "salary": 20000,
+      "totalSales": 40000,
+      "totalOrdersHandled": 90
+    }
+       , {
+      "id": 3,
+      "name": "Sumit Kumar",
+      "role": "Employee",
+      "email": "sumit@spicehub.com",
+      "password": "Pass@123",
+      "salary": 21000,
+      "totalSales": 45000,
+      "totalOrdersHandled": 95
+    },
+        {
+      "id": 4,
+      "name": "Akhil Kumar",
+      "role": "Employee",
+      "email": "akhil@spicehub.com",
+      "password": "Pass@123",
+      "salary": 25000,
+      "totalSales": 55000,
+      "totalOrdersHandled": 105
+    }
+  ],
+ "menu": [
+  {
+    "id": 101,
+    "name": "Paneer Butter Masala",
+    "category": "Main Course",
+    "price": 250,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Creamy paneer curry cooked in rich tomato gravy."
+  },
+  {
+    "id": 102,
+    "name": "Masala Dosa",
+    "category": "South Indian",
+    "price": 120,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Crispy dosa stuffed with spiced potato filling."
+  },
+  {
+    "id": 103,
+    "name": "Cold Coffee",
+    "category": "Beverage",
+    "price": 90,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Chilled coffee blended with ice and sugar."
+  },
+  {
+    "id": 104,
+    "name": "Veg Manchurian",
+    "category": "Starter",
+    "price": 160,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Crispy vegetable balls tossed in tangy Indo-Chinese sauce."
+  },
+  {
+    "id": 105,
+    "name": "Chicken Lollipop",
+    "category": "Starter",
+    "price": 200,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Deep-fried chicken wings coated with spicy batter."
+  },
+  {
+    "id": 106,
+    "name": "Veg Fried Rice",
+    "category": "Main Course",
+    "price": 180,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Fragrant rice stir-fried with vegetables and soy sauce."
+  },
+  {
+    "id": 107,
+    "name": "Hakka Noodles",
+    "category": "Main Course",
+    "price": 170,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Soft noodles stir-fried with vegetables and sauces."
+  },
+  {
+    "id": 108,
+    "name": "Butter Naan",
+    "category": "Bread",
+    "price": 50,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Soft Indian bread brushed with butter."
+  },
+  {
+    "id": 109,
+    "name": "Tandoori Roti",
+    "category": "Bread",
+    "price": 25,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Traditional whole wheat flatbread cooked in clay oven."
+  },
+  {
+    "id": 110,
+    "name": "Dal Makhani",
+    "category": "Main Course",
+    "price": 210,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Black lentils cooked with butter and cream."
+  },
+  {
+    "id": 111,
+    "name": "Chicken Biryani",
+    "category": "Main Course",
+    "price": 260,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Aromatic basmati rice layered with spiced chicken."
+  },
+  {
+    "id": 112,
+    "name": "Mutton Rogan Josh",
+    "category": "Main Course",
+    "price": 320,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Tender mutton cooked in rich Kashmiri gravy."
+  },
+  {
+    "id": 113,
+    "name": "Spring Rolls",
+    "category": "Starter",
+    "price": 130,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Crispy rolls filled with sautéed vegetables."
+  },
+  {
+    "id": 114,
+    "name": "Tomato Soup",
+    "category": "Soup",
+    "price": 90,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Creamy soup made from fresh tomatoes and herbs."
+  },
+  {
+    "id": 115,
+    "name": "Sweet Corn Soup",
+    "category": "Soup",
+    "price": 100,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Mildly seasoned soup with sweet corn kernels."
+  },
+  {
+    "id": 116,
+    "name": "Mango Lassi",
+    "category": "Beverage",
+    "price": 80,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Refreshing yogurt-based drink with mango flavor."
+  },
+  {
+    "id": 117,
+    "name": "Hot Chocolate",
+    "category": "Beverage",
+    "price": 100,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Steamed milk mixed with melted chocolate and sugar."
+  },
+  {
+    "id": 118,
+    "name": "Fresh Lime Soda",
+    "category": "Beverage",
+    "price": 60,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Sparkling soda with lemon juice and salt/sugar."
+  },
+  {
+    "id": 119,
+    "name": "Grilled Sandwich",
+    "category": "Snack",
+    "price": 120,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Toasted bread stuffed with cheese and vegetables."
+  },
+  {
+    "id": 120,
+    "name": "Veg Burger",
+    "category": "Snack",
+    "price": 130,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Crispy veg patty served with lettuce, tomato, and cheese."
+  },
+  {
+    "id": 121,
+    "name": "French Fries",
+    "category": "Snack",
+    "price": 100,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Crispy golden fried potato fingers."
+  },
+  {
+    "id": 122,
+    "name": "Caesar Salad",
+    "category": "Salad",
+    "price": 150,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Lettuce, croutons, and cheese tossed in creamy dressing."
+  },
+  {
+    "id": 123,
+    "name": "Greek Salad",
+    "category": "Salad",
+    "price": 160,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Tomatoes, cucumbers, olives, and feta cheese with olive oil."
+  },
+  {
+    "id": 124,
+    "name": "Chocolate Brownie",
+    "category": "Dessert",
+    "price": 140,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Soft chocolate brownie served with vanilla ice cream."
+  },
+  {
+    "id": 125,
+    "name": "Gulab Jamun",
+    "category": "Dessert",
+    "price": 90,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Sweet milk-solid dumplings soaked in sugar syrup."
+  },
+  {
+    "id": 126,
+    "name": "Rasmalai",
+    "category": "Dessert",
+    "price": 120,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Soft paneer patties soaked in saffron milk syrup."
+  },
+  {
+    "id": 127,
+    "name": "Ice Cream Sundae",
+    "category": "Dessert",
+    "price": 150,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Layered ice cream topped with nuts and chocolate sauce."
+  },
+  {
+    "id": 128,
+    "name": "Tandoori Chicken",
+    "category": "Main Course",
+    "price": 280,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Marinated chicken grilled in tandoor with spices."
+  },
+  {
+    "id": 129,
+    "name": "Fish Curry",
+    "category": "Main Course",
+    "price": 310,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Spicy fish curry cooked in coconut and tamarind gravy."
+  },
+  {
+    "id": 130,
+    "name": "Jeera Rice",
+    "category": "Main Course",
+    "price": 120,
+    "availability": true,
+    "taxRate": 5,
+    "description": "Aromatic basmati rice flavored with cumin seeds."
+  }
+]
+,
+  "orders": [
+    {
+      "orderId": "ORD-001",
+      "tableNumber": 5,
+      "customerName": "Rohan Mehta",
+      "employeeId": 2,
+      "status": "Completed",
+      "orderDate": "2025-10-10T13:20:00",
+      "items": [
+        {
+          "menuId": 101,
+          "name": "Paneer Butter Masala",
+          "quantity": 2,
+          "price": 250,
+          "tax": 25,
+          "subtotal": 525
+        },
+        {
+          "menuId": 103,
+          "name": "Cold Coffee",
+          "quantity": 1,
+          "price": 90,
+          "tax": 4.5,
+          "subtotal": 94.5
+        }
+      ],
+      "discount": 0,
+      "serviceCharge": 61.95,
+      "gst": 29.48,
+      "totalAmount": 710.93,
+      "paymentMethod": "UPI",
+      "invoiceId": "INV-001"
+    }
+  ],
+  "invoices": [
+    {
+      "invoiceId": "INV-001",
+      "orderId": "ORD-001",
+      "restaurantName": "SpiceHub Restaurant",
+      "customerName": "Rohan Mehta",
+      "tableNumber": 5,
+      "date": "2025-10-10",
+      "time": "13:25",
+      "items": [
+        {
+          "name": "Paneer Butter Masala",
+          "quantity": 2,
+          "price": 250,
+          "tax": 25,
+          "subtotal": 525
+        },
+        {
+          "name": "Cold Coffee",
+          "quantity": 1,
+          "price": 90,
+          "tax": 4.5,
+          "subtotal": 94.5
+        }
+      ],
+      "gst": 29.48,
+      "serviceCharge": 61.95,
+      "totalAmount": 710.93,
+      "paymentMethod": "UPI",
+      "status": "Paid"
+    }
+  ],
+  "dashboard": {
+    "manager": {
+      "summary": {
+        "totalEmployees": 5,
+        "totalOrders": 450,
+        "totalRevenue": 125000,
+        "totalCustomersServed": 410
+      },
+      "charts": {
+        "dailySales": [
+          { "date": "2025-10-05", "sales": 12000 },
+          { "date": "2025-10-06", "sales": 13500 },
+          { "date": "2025-10-07", "sales": 15000 },
+          { "date": "2025-10-08", "sales": 14200 },
+          { "date": "2025-10-09", "sales": 16800 }
+        ],
+        "topEmployees": [
+          { "name": "Amit Kumar", "sales": 45000 },
+          { "name": "Neha Singh", "sales": 38000 }
+        ],
+        "topDishes": [
+          { "name": "Paneer Butter Masala", "orders": 180 },
+          { "name": "Masala Dosa", "orders": 120 }
+        ]
+      }
+    },
+    "employee": {
+      "employeeId": 2,
+      "totalOrdersHandled": 90,
+      "totalRevenueGenerated": 45000,
+      "averageOrderValue": 500,
+      "recentOrders": ["ORD-001", "ORD-002", "ORD-003"]
+    }
+  },
+  "auth": {
+    "roles": [
+      {
+        "role": "Manager",
+        "permissions": [
+          "manageEmployees",
+          "manageMenu",
+          "viewReports",
+          "viewDashboard",
+          "createOrder",
+          "modifyOrder"
+        ]
+      },
+      {
+        "role": "Employee",
+        "permissions": [
+          "createOrder",
+          "modifyOrder",
+          "viewOwnSales"
+        ]
+      }
+    ]
+  }
+}
