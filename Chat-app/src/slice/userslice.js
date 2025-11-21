@@ -1,99 +1,134 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import { auth,db, provider } from "../firebase";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import {collection,getDocs,setDoc} from 'firebase/firestore'
+import { auth, db, provider } from "../firebase";
+import { collection, getDocs, doc, setDoc } from "firebase/firestore";
 
-export const signIn = createAsyncThunk(
-  "user/signin",
-  async ({ email, password }) => {
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    const user = {
-      name: userCredential.user.displayName,
-      email: userCredential.user.email,
-    };
-    return user;
-  }
-);
 
-export const signUp = createAsyncThunk(
-  "user/signup",
-  async ({ email, password }) => {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    const user = {
-      name: userCredential.user.displayName,
-      email: userCredential.user.email,
-    }
-    return user;
-  }
-)
 
+// 🔹 Sign In (email/password)
+export const signin = createAsyncThunk("user/signin", async ({ email, password }) => {
+  const userCredential = await signInWithEmailAndPassword(auth, email, password);
+  const user = {
+    name: userCredential.user.displayName,
+    email: userCredential.user.email,
+  };
+  return user;
+});
+
+// 🔹 Sign Up
+export const signup = createAsyncThunk("user/signup", async ({ email, password }) => {
+  const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+  const user = {
+    name: userCredential.user.displayName,
+    email: userCredential.user.email,
+  };
+  return user;
+});
+
+// 🔹 Fetch all users from Firestore
+export const fetchusers = createAsyncThunk("user/fetch", async () => {
+  const querySnapshot = await getDocs(collection(db, "users"));
+  return querySnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
+});
+
+// 🔹 Sign In with Google
 export const signinwithgoogles = createAsyncThunk("user/google", async (_, thunkAPI) => {
   try {
     const result = await signInWithPopup(auth, provider);
-
     const user = {
       name: result.user.displayName,
       email: result.user.email,
       photo: result.user.photoURL,
     };
-
-    // ✅ Optionally save user to Firestore (using UID)
     await setDoc(doc(db, "users", result.user.uid), user, { merge: true });
-
     alert("Sign in with Google successful!!");
     return user;
   } catch (error) {
-    // Properly reject the thunk with error message
     return thunkAPI.rejectWithValue(error.message);
   }
 });
 
-const initialState = {
+// 🔹 Initial State
+const initialstate = {
   users: [],
   isLoading: false,
   error: null,
+  currentuser:{},
 };
-const userSlice = createSlice({
+
+// 🔹 Slice
+const userslice = createSlice({
   name: "user",
-  initialState: initialState,
+  initialState: initialstate,
+  reducers:{
+     getuser:(state)=>{
+      state.currentuser=JSON.parse(localStorage.getItem("user")||"{}");
+     },
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(signIn.pending, (state, action) => {
+      // Email/Password Sign In
+      .addCase(signin.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(signIn.fulfilled, (state, action) => {
-        state.users.push(action.payload);
-        state.isLoading = false;
-        alert("user signin successfully !!");
+      .addCase(signin.fulfilled, (state, action) => {
+       
+       const user=action.payload;
+        const exists = state.users.some((u) => u.email === action.payload.email);
+        if (!exists) state.users.push(action.payload);
+        localStorage.setItem("user",JSON.stringify(user));
+        state.currentuser=user;
+        state.isLoading=false;
+      
+        
+      
+
       })
-      .addCase(signIn.rejected, (state, action) => {
+      .addCase(signin.rejected, (state) => {
         state.isLoading = false;
-        state.error = "signin failed !!";
-      }).addCase(signUp.pending, (state, action) => {
+        state.error = "Sign in failed!!";
+      })
+
+      // Sign Up
+      .addCase(signup.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(signUp.fulfilled, (state, action) => {
-        state.users.push(action.payload);
+      .addCase(signup.fulfilled, (state, action) => {
         state.isLoading = false;
-        alert("user signin successfully !!");
+        const exists = state.users.some((u) => u.email === action.payload.email);
+        if (!exists) state.users.push(action.payload);
+        alert("Signup successfully!!");
       })
-      .addCase(signUp.rejected, (state, action) => {
+      .addCase(signup.rejected, (state) => {
         state.isLoading = false;
-        state.error = "signin failed !!";
+        state.error = "Signup failed!!";
+      })
+
+      // Fetch Users
+      .addCase(fetchusers.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.users = action.payload;
+      })
+
+      // ✅ Google Sign In (fixed)
+      .addCase(signinwithgoogles.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const exists = state.users.some((u) => u.email === action.payload.email);
+        if (!exists) state.users.push(action.payload);
+      })
+      .addCase(signinwithgoogles.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
       });
   },
 });
 
-export default userSlice.reducer;
+export default userslice.reducer;
+export const {getuser} = userslice.actions;

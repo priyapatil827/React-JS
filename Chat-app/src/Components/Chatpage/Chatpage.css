@@ -1,0 +1,127 @@
+/* Main container */
+.chat-container {
+  height: 100vh;
+  width: 100%;
+  background: #eaf3ff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.chat-header {
+  width: 100%;
+   background: linear-gradient(135deg, #1f1c2c, #928dab);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.chat-header .back-btn {
+  font-size: 18px;
+  background: transparent;
+  color: #faf8f8;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.chat-username {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Sent & Received Messages */
+.message {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.sent {
+  background: #0066cc;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.received {
+  background: #ffffff;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+/* Input Box */
+.chat-input-box {
+  display: flex;
+  padding: 10px;
+   background: linear-gradient(135deg, #1f1c2c, #928dab);
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0px -3px 12px rgba(0,0,0,0.08);
+}
+
+.chat-input-box input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 20px;
+  background: #f3f3f3;
+}
+
+.send-btn {
+  background: #0066cc;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.send-btn:hover {
+  background: #0054a0;
+}
+
+/* Scrollbar hide */
+.chat-body::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
