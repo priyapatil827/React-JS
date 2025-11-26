@@ -1,58 +1,57 @@
-import React, { useState } from 'react'
-import { signup } from '../../slice/userslice';
-import { useDispatch } from "react-redux"
-import "./SignUp.css";
+import React, { useState, useEffect } from 'react'
+import { signup, fetchusers } from '../../slice/userslice';
+import { useDispatch, useSelector } from "react-redux";
+import "./Signup.css";
 
-export default function SignUp() {
-  const dispatch = useDispatch();
-
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
 
-  const handleSignup = () => {
-    dispatch(signup({ name, email, password }));
-  };
+  const dispatch = useDispatch();
+  const { users } = useSelector(state => state.user);
+
+  useEffect(() => {
+    dispatch(fetchusers());
+  }, [dispatch]);
 
   return (
-    <div className="auth-wrapper">
-      <div className="auth-box">
-
-        <h2 className="title">Create Account ✨</h2>
-        <p className="subtitle">Join and start chatting</p>
-
-        <div className="input-group">
-          <input
-            type="text"
-            placeholder="Full Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
+    <div className="signup-wrapper">
+      <div className="signup-card">
+        <h2 className="title">Create Account</h2>
 
         <div className="input-group">
           <input
             type="email"
-            placeholder="Email Address"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          <label>Email</label>
         </div>
 
         <div className="input-group">
           <input
             type="password"
-            placeholder="Create Password"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <label>Password</label>
         </div>
 
-        <button className="btn-login" onClick={handleSignup}>
+        <button
+          className="btn signup-btn"
+          onClick={() => dispatch(signup({ email, password }))}
+        >
           Sign Up
         </button>
 
+        <div className="users-list">
+          {users.map((user, i) => (
+            <div key={i} className="user-item">{user.email}</div>
+          ))}
+        </div>
       </div>
     </div>
-  );
+  )
 }

@@ -68,7 +68,7 @@ const userslice = createSlice({
   name: "user",
   initialState: initialstate,
   reducers:{
-     getuser:(state)=>{
+     getUser:(state)=>{
       state.currentuser=JSON.parse(localStorage.getItem("user")||"{}");
      },
   },
@@ -131,4 +131,4 @@ const userslice = createSlice({
 });
 
 export default userslice.reducer;
-export const {getuser} = userslice.actions;
+export const {getUser} = userslice.actions;

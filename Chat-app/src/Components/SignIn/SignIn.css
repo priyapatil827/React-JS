@@ -1,128 +1,126 @@
-/* Background */
-.auth-wrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg,#1f1c2c,#928dab);
-  font-family: 'Poppins', sans-serif;
-  padding: 20px;
+/* Full-screen background */
+.signin-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(135deg, #4a00e0, #8e2de2); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-/* Glass Card */
-.auth-box {
-  width: 350px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 35px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  text-align: center;
-  animation: fadeIn 0.6s ease-in-out;
+/* Card container */
+.signin-card {
+    background: #1e1e2f;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    width: 350px;
+    color: #fff;
+    text-align: center;
 }
 
 /* Title */
 .title {
-  color: #fff;
-  font-size: 26px;
-  margin-bottom: 8px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
 }
 
-.subtitle {
-  color: #d8d8d8;
-  font-size: 14px;
-  margin-bottom: 30px;
+/* Floating label input */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
 }
 
-/* Inputs */
 .input-group input {
-  width: 100%;
-  padding: 12px 14px;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  background: rgba(255,255,255,0.2);
-  color: #fff;
-  outline: none;
-  font-size: 14px;
+    width: 100%;
+    padding: 12px 10px;
+    background: #2c2c3e;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
 }
 
-.input-group input::placeholder {
-  color: #e0e0e0;
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #aaa;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #ff6b81;
+    background: #1e1e2f;
+    padding: 0 5px;
 }
 
 /* Buttons */
-.btn-login,
-.btn-google {
-  width: 100%;
-  padding: 12px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 15px;
-  transition: 0.3s;
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Login Button */
-.btn-login {
-  background: #00eaff;
-  color: #000;
-}
-.btn-login:hover {
-  background: #00bcd4;
+.signin-btn {
+    background: #ff6b81;
+    color: #fff;
 }
 
-/* Google Button */
-.btn-google {
-  background: #fff;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.btn-google img {
-  width: 20px;
+.signin-btn:hover {
+    background: #ff4757;
 }
 
-/* Divider */
-.divider {
-  color: #eee;
-  font-size: 12px;
-  margin: 10px 0;
-  position: relative;
-}
-.divider::before,
-.divider::after {
-  content: "";
-  width: 40%;
-  height: 1px;
-  background: rgba(255,255,255,0.3);
-  position: absolute;
-  top: 50%;
-}
-.divider::before { left: 0; }
-.divider::after { right: 0; }
-
-/* Bottom text */
-.bottom-text {
-  color: #fff;
-  font-size: 13px;
-}
-.link {
-  color: #00eaff;
-  cursor: pointer;
-  font-weight: 600;
-}
-.link:hover {
-  text-decoration: underline;
+.google-btn {
+    background: #4285F4;
+    color: #fff;
 }
 
-/* Entry Animation */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
+.google-btn:hover {
+    background: #357ae8;
+}
+
+.signup-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.signup-link {
+    background: none;
+    color: #ff6b81;
+    font-weight: 600;
+    padding: 0;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    color: wheat;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .signin-card {
+        width: 90%;
+        padding: 30px 20px;
+    }
 }

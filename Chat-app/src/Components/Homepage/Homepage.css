@@ -1,103 +1,125 @@
-/* Full page background */
+/* Full-page wrapper */
 .user-home-container {
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  padding: 20px;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  overflow-y: auto;
-  position: relative;
+    padding: 20px;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #4a00e0, #8e2de2); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
 }
 
-/* Back Button */
+/* Back button */
 .back-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  font-size: 18px;
-  color: #000;
-  padding: 8px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-bottom: 12px;
+    background: none;
+    border: none;
+    color:black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s;
 }
 
 .back-btn:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: scale(1.05);
+    color: #ff6b81;
 }
 
-/* Title */
+/* Current user title */
 .user-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-align: center;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: black;
 }
 
-/* List Styling */
+/* User list */
 .user-list {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
-/* Each User Row */
+/* Each user item card */
 .user-item {
-  background: #b8b7b7;
-  color: #333;
-  padding: 15px 18px;
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 12px 0;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.18);
+    background: #1e1e2f;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .user-item:hover {
-  background: #e7f3ff;
-  transform: translateX(5px);
+    background: #2c2c3e;
+    transform: translateY(-3px);
 }
 
-/* Profile with text group */
+/* User info box */
 .user-info-box {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Avatar Circle */
+/* Avatar circle */
 .user-avatar {
-  background: #0068b8;
-  color: #fff;
-  font-weight: 700;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 18px;
+    width: 50px;
+    height: 50px;
+    background: #ff6b81;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    flex-shrink: 0;
+    transition: 0.3s;
 }
 
-/* Email name */
+.user-item:hover .user-avatar {
+    background: #ff4757;
+}
+
+/* User info text */
 .user-info {
-  font-weight: 600;
-  font-size: 16px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
 }
 
-/* Small Subtext */
 .user-subtext {
-  font-size: 12px;
-  color: #666;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 3px;
 }
 
-/* Scroll scrollbar hide */
-.user-home-container::-webkit-scrollbar {
-  width: 0px;
+/* Scrollbar styling if list gets long */
+.user-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.user-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .user-item {
+        padding: 12px 15px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }

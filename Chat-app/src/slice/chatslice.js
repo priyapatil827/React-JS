@@ -1,56 +1,126 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { db } from '../firebase'
-import { doc, setDoc, getDocs, addDoc, collection } from 'firebase/firestore'
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { db } from "../firebase";
+import {
+  collection,
+  doc,
+  getDocs,
+  setDoc,
+  deleteDoc,
+  query,
+  orderBy,
+  updateDoc,
+} from "firebase/firestore";
 
-export const readMessage = createAsyncThunk("chat/read", async ({ sender, receiver }) => {
-  const docId = sender + "_" + receiver;
-  const snapshots = await getDocs(collection(db, "chatroom", docId, "chats"));
-  const chatList = snapshots.docs.map((snap) => snap.data());
-  return chatList;
-})
-
-export const sendMessage = createAsyncThunk("chat/send", async ({ sender, receiver }) => {
-  const docId = sender + "_" + receiver;;
-  const chatId = Date.now().toLocaleString();
-  try {
-    await setDoc(doc(db, "chatroom", docId, "chats", chatId), {
-      message: "hello",
-    })
-  } catch (error) {
-    console.log("Error adding document: ", error);
-  }
-})
-
-const initialState = {
-  chats: [],
-  isLoading: false,
-  error: null,
+const getDocId = (sender, receiver) => {
+  const users = [sender, receiver].sort();
+  return users[0] + "-" + users[1];
 };
+
+// READ messages
+export const readmessage = createAsyncThunk(
+  "chat/read",
+  async ({ sender, receiver }) => {
+    const docid = getDocId(sender, receiver);
+    const q = query(
+      collection(db, "chatroom", docid, "chats"),
+      orderBy("createdAt", "asc")
+    );
+    const snapshot = await getDocs(q);
+    return snapshot.docs.map((d) => d.data());
+  }
+);
+
+// SEND message (instant UI update)
+export const sendmessage = createAsyncThunk(
+  "chat/send",
+  async ({ message, sender, receiver }, thunkAPI) => {
+    try {
+      const docid = getDocId(sender, receiver);
+      const chatid = Date.now();
+
+      const newChat = {
+        chatid,
+        message,
+        sender,
+        receiver,
+        createdAt: chatid,
+      };
+
+      await setDoc(doc(db, "chatroom", docid, "chats", chatid.toString()), newChat);
+
+      return newChat;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+// DELETE message
+export const deletemessage = createAsyncThunk(
+  "chat/delete",
+  async ({ sender, receiver, chatid }) => {
+    const docid = getDocId(sender, receiver);
+    await deleteDoc(doc(db, "chatroom", docid, "chats", chatid.toString()));
+    return chatid;
+  }
+);
+
+// UPDATE message
+export const updatemessage = createAsyncThunk(
+  "chat/edit",
+  async ({ sender, receiver, chatid, newMessage }, thunkAPI) => {
+    try {
+      const docid = getDocId(sender, receiver);
+      await updateDoc(doc(db, "chatroom", docid, "chats", chatid.toString()), {
+        message: newMessage,
+        edited: true,
+        updatedAt: Date.now(),
+      });
+
+      return { chatid, newMessage };
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
 
 const chatslice = createSlice({
   name: "chat",
-  initialState,
+  initialState: {
+    chats: [],
+    isLoading: false,
+    error: null,
+  },
+  reducers: {
+    resetChats: (state) => {
+      state.chats = [];
+    },
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(sendMessage.pending, (state) => {
+      .addCase(readmessage.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(sendMessage.fulfilled, (state) => {
-        state.isLoading = false;
-        alert("message sended sucessfully!");
-      })
-      .addCase(sendMessage.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      }).addCase(readMessage.pending, (state) => {
-        state.isLoading = true;
-      }).addCase(readMessage.fulfilled, (state, action) => {
-        state.isLoading = false;
+      .addCase(readmessage.fulfilled, (state, action) => {
         state.chats = action.payload;
-      }).addCase(readMessage.rejected, (state) => {
-        state.error = "could not read the data";
+        state.isLoading = false;
+      })
+      .addCase(sendmessage.fulfilled, (state, action) => {
+        state.chats.push(action.payload);
+      })
+      .addCase(deletemessage.fulfilled, (state, action) => {
+        state.chats = state.chats.filter((c) => c.chatid !== action.payload);
+      })
+      .addCase(updatemessage.fulfilled, (state, action) => {
+        const { chatid, newMessage } = action.payload;
+        const index = state.chats.findIndex((c) => c.chatid === chatid);
+        if (index !== -1) {
+          state.chats[index].message = newMessage;
+          state.chats[index].edited = true;
+        }
       });
-  }
+  },
 });
 
+export const { resetChats } = chatslice.actions;
 export default chatslice.reducer;

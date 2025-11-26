@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchusers, getuser } from '../../slice/userslice';
+import { fetchusers, getUser } from '../../slice/userslice';
 import { useNavigate } from 'react-router-dom';
 import "./Homepage.css";
 
@@ -10,7 +10,7 @@ export default function Homepage() {
   let { users, currentuser } = useSelector(state => state.user);
 
   useEffect(() => {
-    dispatch(getuser());
+    dispatch(getUser());
     dispatch(fetchusers());
   }, [dispatch]);
 
