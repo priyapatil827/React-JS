@@ -7,27 +7,39 @@ import {
 import { auth, db, provider } from "../firebase";
 import { collection, getDocs, doc, setDoc } from "firebase/firestore";
 
-
-
 // 🔹 Sign In (email/password)
-export const signin = createAsyncThunk("user/signin", async ({ email, password }) => {
-  const userCredential = await signInWithEmailAndPassword(auth, email, password);
-  const user = {
-    name: userCredential.user.displayName,
-    email: userCredential.user.email,
-  };
-  return user;
-});
+export const signin = createAsyncThunk(
+  "user/signin",
+  async ({ email, password }) => {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = {
+      name: userCredential.user.displayName,
+      email: userCredential.user.email,
+    };
+    return user;
+  }
+);
 
 // 🔹 Sign Up
-export const signup = createAsyncThunk("user/signup", async ({ email, password }) => {
-  const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-  const user = {
-    name: userCredential.user.displayName,
-    email: userCredential.user.email,
-  };
-  return user;
-});
+export const signup = createAsyncThunk(
+  "user/signup",
+  async ({ email, password }) => {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = {
+      name: userCredential.user.displayName,
+      email: userCredential.user.email,
+    };
+    return user;
+  }
+);
 
 // 🔹 Fetch all users from Firestore
 export const fetchusers = createAsyncThunk("user/fetch", async () => {
@@ -39,38 +51,41 @@ export const fetchusers = createAsyncThunk("user/fetch", async () => {
 });
 
 // 🔹 Sign In with Google
-export const signinwithgoogles = createAsyncThunk("user/google", async (_, thunkAPI) => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    const user = {
-      name: result.user.displayName,
-      email: result.user.email,
-      photo: result.user.photoURL,
-    };
-    await setDoc(doc(db, "users", result.user.uid), user, { merge: true });
-    alert("Sign in with Google successful!!");
-    return user;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+export const signinwithgoogles = createAsyncThunk(
+  "user/google",
+  async (_, thunkAPI) => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = {
+        name: result.user.displayName,
+        email: result.user.email,
+        photo: result.user.photoURL,
+      };
+      await setDoc(doc(db, "users", result.user.uid), user, { merge: true });
+      alert("Sign in with Google successful!!");
+      return user;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
   }
-});
+);
 
 // 🔹 Initial State
 const initialstate = {
   users: [],
   isLoading: false,
   error: null,
-  currentuser:{},
+  currentuser: {},
 };
 
 // 🔹 Slice
 const userslice = createSlice({
   name: "user",
   initialState: initialstate,
-  reducers:{
-     getUser:(state)=>{
-      state.currentuser=JSON.parse(localStorage.getItem("user")||"{}");
-     },
+  reducers: {
+    getUser: (state) => {
+      state.currentuser = JSON.parse(localStorage.getItem("user") || "{}");
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -79,18 +94,16 @@ const userslice = createSlice({
         state.isLoading = true;
       })
       .addCase(signin.fulfilled, (state, action) => {
-       
-       const user=action.payload;
-        const exists = state.users.some((u) => u.email === action.payload.email);
+        const user = action.payload;
+        const exists = state.users.some(
+          (u) => u.email === action.payload.email
+        );
         if (!exists) state.users.push(action.payload);
-        localStorage.setItem("user",JSON.stringify(user));
-        state.currentuser=user;
-        state.isLoading=false;
-      
-        
-      
-
+        localStorage.setItem("user", JSON.stringify(user));
+        state.currentuser = user;
+        state.isLoading = false;
       })
+
       .addCase(signin.rejected, (state) => {
         state.isLoading = false;
         state.error = "Sign in failed!!";
@@ -102,7 +115,9 @@ const userslice = createSlice({
       })
       .addCase(signup.fulfilled, (state, action) => {
         state.isLoading = false;
-        const exists = state.users.some((u) => u.email === action.payload.email);
+        const exists = state.users.some(
+          (u) => u.email === action.payload.email
+        );
         if (!exists) state.users.push(action.payload);
         alert("Signup successfully!!");
       })
@@ -120,7 +135,9 @@ const userslice = createSlice({
       // ✅ Google Sign In (fixed)
       .addCase(signinwithgoogles.fulfilled, (state, action) => {
         state.isLoading = false;
-        const exists = state.users.some((u) => u.email === action.payload.email);
+        const exists = state.users.some(
+          (u) => u.email === action.payload.email
+        );
         if (!exists) state.users.push(action.payload);
       })
       .addCase(signinwithgoogles.rejected, (state, action) => {
@@ -131,4 +148,4 @@ const userslice = createSlice({
 });
 
 export default userslice.reducer;
-export const {getUser} = userslice.actions;
+export const { getUser } = userslice.actions;

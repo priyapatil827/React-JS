@@ -1,0 +1,154 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma",
+      "age": 17,
+      "class": "12th",
+      "email": "aarav.sharma@example.com",
+      "phone": "9876543210",
+      "address": "Mumbai",
+      "marks": { "math": 88, "science": 92, "english": 85 }
+    },
+    {
+      "id": 2,
+      "name": "Priya Singh",
+      "age": 16,
+      "class": "11th",
+      "email": "priya.singh@example.com",
+      "phone": "9988776655",
+      "address": "Pune",
+      "marks": { "math": 90, "science": 89, "english": 93 }
+    },
+    {
+      "id": 3,
+      "name": "Rohit Verma",
+      "age": 18,
+      "class": "12th",
+      "email": "rohit.verma@example.com",
+      "phone": "9123456780",
+      "address": "Delhi",
+      "marks": { "math": 76, "science": 81, "english": 79 }
+    },
+    {
+      "id": 4,
+      "name": "Sneha Patil",
+      "age": 17,
+      "class": "11th",
+      "email": "sneha.patil@example.com",
+      "phone": "9090909090",
+      "address": "Kolhapur",
+      "marks": { "math": 95, "science": 97, "english": 91 }
+    },
+    {
+      "id": 5,
+      "name": "Ishaan Mehta",
+      "age": 15,
+      "class": "10th",
+      "email": "ishaan.mehta@example.com",
+      "phone": "8877665544",
+      "address": "Nashik",
+      "marks": { "math": 82, "science": 78, "english": 88 }
+    },
+    {
+      "id": 6,
+      "name": "Kavya Desai",
+      "age": 16,
+      "class": "11th",
+      "email": "kavya.desai@example.com",
+      "phone": "9988002211",
+      "address": "Surat",
+      "marks": { "math": 91, "science": 90, "english": 87 }
+    },
+    {
+      "id": 7,
+      "name": "Manav Gupta",
+      "age": 17,
+      "class": "12th",
+      "email": "manav.gupta@example.com",
+      "phone": "8899776655",
+      "address": "Ahmedabad",
+      "marks": { "math": 84, "science": 86, "english": 80 }
+    },
+    {
+      "id": 8,
+      "name": "Riya Malhotra",
+      "age": 16,
+      "class": "11th",
+      "email": "riya.malhotra@example.com",
+      "phone": "7766554433",
+      "address": "Bhopal",
+      "marks": { "math": 94, "science": 92, "english": 90 }
+    },
+    {
+      "id": 9,
+      "name": "Arjun Yadav",
+      "age": 15,
+      "class": "10th",
+      "email": "arjun.yadav@example.com",
+      "phone": "9001122334",
+      "address": "Lucknow",
+      "marks": { "math": 86, "science": 83, "english": 82 }
+    },
+    {
+      "id": 10,
+      "name": "Sara Khan",
+      "age": 17,
+      "class": "12th",
+      "email": "sara.khan@example.com",
+      "phone": "7011122299",
+      "address": "Hyderabad",
+      "marks": { "math": 92, "science": 94, "english": 89 }
+    },
+    {
+      "id": 11,
+      "name": "Vivaan Kapoor",
+      "age": 16,
+      "class": "11th",
+      "email": "vivaan.kapoor@example.com",
+      "phone": "7755332211",
+      "address": "Jaipur",
+      "marks": { "math": 78, "science": 75, "english": 80 }
+    },
+    {
+      "id": 12,
+      "name": "Nisha Jain",
+      "age": 15,
+      "class": "10th",
+      "email": "nisha.jain@example.com",
+      "phone": "6699887766",
+      "address": "Indore",
+      "marks": { "math": 96, "science": 95, "english": 94 }
+    },
+    {
+      "id": 13,
+      "name": "Aditya Rathod",
+      "age": 18,
+      "class": "12th",
+      "email": "aditya.rathod@example.com",
+      "phone": "8223344556",
+      "address": "Vadodara",
+      "marks": { "math": 88, "science": 84, "english": 86 }
+    },
+    {
+      "id": 14,
+      "name": "Pooja Pawar",
+      "age": 17,
+      "class": "11th",
+      "email": "pooja.pawar@example.com",
+      "phone": "9099558811",
+      "address": "Nagpur",
+      "marks": { "math": 93, "science": 91, "english": 90 }
+    },
+    {
+      "id": 15,
+      "name": "Krish Patel",
+      "age": 16,
+      "class": "10th",
+      "email": "krish.patel@example.com",
+      "phone": "8888777665",
+      "address": "Rajkot",
+      "marks": { "math": 81, "science": 79, "english": 83 }
+    }
+  ]
+}
