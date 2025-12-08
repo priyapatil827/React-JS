@@ -75,22 +75,39 @@ JSON Server (optional) – For simulating student API
 
 ## 📂 Project Structure
 src/
+
 ├── Components/
+
 │   ├── Navbar/
+
 │   ├── Dashboard/
+
 │   ├── StudentList/
+
 │   └── StudentDetails/
+
 ├── Pages/
+
 │   ├── FirstPage/
+
 │   ├── SignIn/
+
 │   └── SignUp/
+
 ├── slices/
+
 │   ├── authenticationSlice.js
+
 │   └── studentSlice.js
+
 ├── store/
+
 │   └── store.js
+
 ├── App.js
+
 └── index.js
+
 
 
 ## 📸 Screenshots
