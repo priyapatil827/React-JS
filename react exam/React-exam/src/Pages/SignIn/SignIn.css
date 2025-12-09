@@ -1,97 +1,83 @@
-/* Container split into two halves */
+/* MAIN SIGNIN LAYOUT */
 .sms-signin-container {
   display: flex;
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;   /* Scroll band */
 }
 
-/* Left side with system branding */
+/* LEFT SIDE */
 .sms-signin-left {
   flex: 1;
-  background: linear-gradient(135deg, #6c63ff, #3f3d56);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
+  background: #452829;
+  color: white;
+  display: flex;             
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center;       
+  padding: 40px;
+  text-align: center;
 }
 
 .sms-signin-left h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 38px;
+  margin-bottom: 10px;
 }
 
 .sms-signin-left p {
   font-size: 18px;
+  opacity: 0.9;
 }
 
-/* Right side with login form */
+/* RIGHT SIDE */
 .sms-signin-right {
   flex: 1;
+  background: #F3E8DF;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
 }
 
+/* FORM */
 .sms-signin-form {
-  background: #fff;
-  padding: 40px;
+  background: #E8D1C5;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   width: 350px;
-  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .sms-signin-form h2 {
-  margin-bottom: 25px;
-  color: #333;
+  text-align: center;
+  margin-bottom: 18px;
 }
 
 .sms-signin-form input {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  transition: border 0.2s;
-}
-
-.sms-signin-form input:focus {
-  border-color: #6c63ff;
-  outline: none;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #57595B;
 }
 
 .sms-signin-form button {
   width: 100%;
-  padding: 12px 15px;
-  background-color: #6c63ff;
-  color: #fff;
+  padding: 12px;
+  background: #452829;
+  color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
-.sms-signin-form button:hover {
-  background-color: #574fd6;
+.error-text {
+  color: red;
+  margin-top: 8px;
+  text-align: center;
 }
 
 .signup-text {
-  margin-top: 15px;
-  font-size: 14px;
-}
-
-.signup-text a {
-  color: #6c63ff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.signup-text a:hover {
-  color: #574fd6;
+  text-align: center;
+  margin-top: 12px;
 }

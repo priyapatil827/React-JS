@@ -1,42 +1,46 @@
-.signup-container {
-  width: 100%;
+/* Same layout as SignIn for consistency */
+
+.sms-signin-container {
+  display: flex;
   height: 100vh;
+}
+
+.sms-signin-left {
+  flex: 1;
+  background: #57595B;
+  color: white;
+  padding: 50px;
+}
+
+.sms-signin-right {
+  flex: 1;
+  background: #F3E8DF;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: #f5f7fa;
-  font-family: "Poppins", sans-serif;
+  align-items: center;
 }
 
-.signup-box {
-  display: flex;
-  flex-direction: column;
+.sms-signin-form {
+  background: #E8D1C5;
+  padding: 30px;
+  border-radius: 12px;
   width: 350px;
-  padding: 25px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.signup-box input {
-  margin: 10px 0;
+.sms-signin-form input {
+  width: 100%;
+  margin: 12px 0;
   padding: 12px;
   border-radius: 6px;
-  border: 1px solid #ddd;
+  border: 1px solid #57595B;
 }
 
-.signup-box button {
-  margin-top: 10px;
+.sms-signin-form button {
+  width: 100%;
   padding: 12px;
-  background: #007bff;
+  background: #452829;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
-}
-
-.signup-box button:hover {
-  background: #0056b3;
 }

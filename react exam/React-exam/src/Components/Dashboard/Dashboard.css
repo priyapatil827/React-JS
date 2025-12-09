@@ -1,82 +1,38 @@
-/* Dashboard Container */
+
+
 .sms-dashboard-container {
-  height: 100vh;
-  background-color: #f0f4ff; /* light blue background */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-}
-
-/* Navbar */
-.sms-navbar {
+  height: 89vh;
+  background: #F3E8DF;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 20px 40px;
-  background: linear-gradient(90deg, #6c63ff, #3f3dff); /* blue gradient */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.sms-logo {
-  font-weight: bold;
-  font-size: 24px;
-  color: #fff;
-}
-
-.sms-logout-btn {
-  background-color: #fff;
-  color: #6c63ff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.sms-logout-btn:hover {
-  background-color: #e0e4ff;
-  transform: scale(1.05);
-}
-
-/* Center Content */
 .sms-center-content {
   text-align: center;
-  margin-top: 15vh;
+  background: #E8D1C5;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .sms-logo-center {
-  font-size: 80px;
-  margin-bottom: 20px;
-  color: #6c63ff;
+  font-size: 60px;
 }
 
-.sms-center-content h1 {
-  font-size: 36px;
-  color: #3f3dff;
-  margin-bottom: 10px;
-}
-
-.sms-center-content p {
-  font-size: 18px;
-  color: #5d6dff;
-  margin-bottom: 50px;
-}
-
-/* View Students Button */
 .sms-view-students-btn {
-  padding: 20px 50px;
-  font-size: 18px;
-  background: linear-gradient(45deg, #6c63ff, #3f3dff);
-  color: #fff;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #452829;
   border: none;
-  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(108,99,255,0.3);
-  transition: 0.3s;
 }
 
 .sms-view-students-btn:hover {
-  background: linear-gradient(45deg, #574fd6, #2c2abf);
-  transform: translateY(-3px);
+  background: #57595B;
 }
